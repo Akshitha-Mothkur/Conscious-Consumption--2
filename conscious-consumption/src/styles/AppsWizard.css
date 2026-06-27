@@ -1,0 +1,213 @@
+.wizard-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+.wizard-card{
+
+    width:850px;
+    max-height:88vh;
+    overflow-y:auto;
+
+    background:#1d1f27;
+
+    border-radius:16px;
+
+    padding:30px;
+
+    color:white;
+
+    box-shadow:0 0 25px rgba(0,0,0,.4);
+
+}
+
+.wizard-card h2{
+
+    font-size:2rem;
+
+    margin-bottom:6px;
+
+}
+
+.subtitle{
+
+    color:#a5a5a5;
+
+    margin-bottom:25px;
+
+}
+
+.wizard-card h3{
+
+    margin-top:25px;
+
+    margin-bottom:15px;
+
+    color:#d4b6ff;
+
+}
+
+.apps-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(110px,1fr));
+
+    gap:16px;
+
+}
+
+.app-card{
+
+    position:relative;
+
+    height:110px;
+
+    background:#2b2d38;
+
+    border:2px solid transparent;
+
+    border-radius:14px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.app-card:hover{
+
+    transform:translateY(-3px);
+
+    border-color:#bb86fc;
+
+}
+
+.selected{
+
+    border-color:#bb86fc;
+
+    background:#333545;
+
+}
+
+.icon{
+
+    margin-bottom:8px;
+
+}
+
+.app-card p{
+
+    font-size:.85rem;
+
+    text-align:center;
+
+}
+
+.tick{
+
+    position:absolute;
+
+    top:8px;
+
+    right:8px;
+
+    width:22px;
+
+    height:22px;
+
+    border-radius:50%;
+
+    background:#bb86fc;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:.8rem;
+
+    font-weight:bold;
+
+}
+
+.wizard-buttons{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:15px;
+
+    margin-top:35px;
+
+}
+
+.cancel-btn{
+
+    padding:10px 20px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#3b3d49;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+.next-btn{
+
+    padding:10px 28px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#bb86fc;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+.next-btn:hover{
+
+    background:#c897ff;
+
+}
+
+.wizard-card::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.wizard-card::-webkit-scrollbar-thumb{
+
+    background:#555;
+
+    border-radius:10px;
+
+}
