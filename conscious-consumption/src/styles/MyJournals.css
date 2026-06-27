@@ -1,0 +1,25 @@
+.upper{
+    display: flex;
+    gap:30px;
+    padding: 40px;
+    margin-left:10% ;
+}
+
+.upper h2{
+ font-size: 30px;
+}
+
+.upper button{
+    font-size: 18px;
+    background-color: rgb(215, 136, 215);
+    outline: none;
+    border:none;
+    border-radius:12px ;
+    padding: 10px;
+    font-weight: 600;
+    transition: 0.4s ease;
+    &:hover{
+        transform: scale(1.03);
+        background-color: rgb(238, 83, 238);
+    }
+}
