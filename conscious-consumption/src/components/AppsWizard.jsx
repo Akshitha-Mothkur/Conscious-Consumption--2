@@ -34,7 +34,7 @@ const appCategories = [
             { name: "Calendar", icon: <SiGooglecalendar size={38} /> },
             { name: "Docs", icon: <SiGoogledocs size={38} /> },
             { name: "ChatGPT", icon: <SiOpenai size={38} color="#10A37F" /> },
-            { name: "Google", icon: <FcGoogle size={38}/> },
+            { name: "Google", icon: <FcGoogle size={38} /> },
         ]
     },
 
@@ -63,7 +63,7 @@ const appCategories = [
     {
         category: "Shopping",
         apps: [
-            
+
             { name: "Flipkart", icon: <SiFlipkart size={38} color="#2874F0" /> }
         ]
     },
@@ -79,13 +79,13 @@ const appCategories = [
     {
         category: "Others",
         apps: [
-            { name: "Chrome", icon: <FaChrome size={38}  /> },
+            { name: "Chrome", icon: <FaChrome size={38} /> },
             { name: "Maps", icon: <FcGoogle size={38} /> }
         ]
     }
 ];
 
-function AppsWizard({ close }) {
+function AppsWizard({ close, onNext }) {
 
     const [selectedApps, setSelectedApps] = useState([]);
 
@@ -123,11 +123,10 @@ function AppsWizard({ close }) {
 
                                 <div
                                     key={app.name}
-                                    className={`app-card ${
-                                        selectedApps.includes(app.name)
+                                    className={`app-card ${selectedApps.includes(app.name)
                                             ? "selected"
                                             : ""
-                                    }`}
+                                        }`}
                                     onClick={() => toggleApp(app.name)}
                                 >
 
@@ -157,10 +156,12 @@ function AppsWizard({ close }) {
                         Cancel
                     </button>
 
-                    <button className="next-btn">
+                    <button
+                        className="next-btn"
+                        onClick={() => onNext(selectedApps)}
+                    >
                         Next →
                     </button>
-
                 </div>
 
             </div>

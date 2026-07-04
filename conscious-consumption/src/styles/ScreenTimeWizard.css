@@ -1,0 +1,92 @@
+.screen-card{
+    width:550px;
+}
+
+.time-display{
+
+    display:flex;
+    justify-content:center;
+    align-items:end;
+    gap:10px;
+
+    margin:35px 0;
+
+}
+
+.time-display span{
+
+    font-size:3rem;
+    font-weight:bold;
+    color:#bb86fc;
+
+}
+
+.time-display small{
+
+    margin-right:15px;
+    font-size:1rem;
+
+}
+
+.time-container{
+
+    display:flex;
+    justify-content:space-evenly;
+
+    margin:35px 0;
+
+}
+
+.time-box{
+
+    text-align:center;
+
+}
+
+.time-box p{
+
+    margin-bottom:15px;
+
+    color:#cfcfcf;
+
+}
+
+.counter{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.counter button{
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#343644;
+
+    color:white;
+
+    font-size:1.3rem;
+
+    cursor:pointer;
+
+}
+
+.counter span{
+
+    font-size:1.6rem;
+
+    width:45px;
+
+    text-align:center;
+
+}
