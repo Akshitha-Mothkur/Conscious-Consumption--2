@@ -78,6 +78,7 @@ function MyJournals() {
           <JournalWizard appsUsed={selectedApps}
 
           screenTime={screenTime}
+          close={() => setShowJournalWiz(false)}
           />
       
         

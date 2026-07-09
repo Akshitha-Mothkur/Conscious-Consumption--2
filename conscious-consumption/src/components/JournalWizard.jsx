@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../styles/JournalWizard.css"
-function JournalWizard({ appsUsed, screenTime }) {
+import { IoClose } from "react-icons/io5";
+function JournalWizard({ appsUsed, screenTime,close }) {
 
     const apps = appsUsed.slice(0, 3)
     const [journal, setJournal] = useState({
@@ -68,6 +69,12 @@ function JournalWizard({ appsUsed, screenTime }) {
             <div className="wizard-overlay">
                 <div className="wizard-card journal-card">
                     <h3 id="new">New Journal</h3>
+                    <button
+                        className="close-btn"
+                        onClick={close}
+                    >
+                        <IoClose />
+                    </button>
                     <div className="top">
                         <h3>{new Date().toLocaleDateString()}</h3>
                         <div className="apps-used">

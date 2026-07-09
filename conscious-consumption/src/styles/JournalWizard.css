@@ -1,4 +1,38 @@
 .journal-card{
+    position: relative;
+}
+
+.close-btn{
+    position: absolute;
+    top: 18px;
+    right: 18px;
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: transparent;
+    color: #cfcfcf;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.6rem;
+    cursor: pointer;
+
+    transition: all .2s ease;
+}
+
+.close-btn:hover{
+    background: rgba(255,255,255,0.08);
+    color: #ffffff;
+    transform: rotate(90deg);
+}
+
+.journal-card{
     width: 900px;
     max-height: 90vh;
     overflow-y: auto;
