@@ -3,11 +3,12 @@ import "../styles/MyJournals.css";
 
 import AppsWizard from "./AppsWizard";
 import ScreenTimeWizard from "./ScreenTimeWizard";
-
+import JournalWizard from "./JournalWizard";
 function MyJournals() {
 
   const [showAppsWizard, setAppsUsedWizard] = useState(false);
   const [showScreenTimeWizard, setShowScreenTimeWizard] = useState(false);
+  const [showNewJournalWiz, setShowJournalWiz]=useState(false)
 
   const [selectedApps, setSelectedApps] = useState([]);
   const [screenTime, setScreenTime] = useState(null);
@@ -59,6 +60,7 @@ function MyJournals() {
             setScreenTime(time);
 
             setShowScreenTimeWizard(false);
+            setShowJournalWiz(true)
 
             console.log(selectedApps);
             console.log(time);
@@ -69,6 +71,18 @@ function MyJournals() {
         />
 
       )}
+
+      {
+        showNewJournalWiz && (
+
+          <JournalWizard appsUsed={selectedApps}
+
+          screenTime={screenTime}
+          />
+      
+        
+        
+        )}
 
     </>
   );

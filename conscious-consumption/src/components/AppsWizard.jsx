@@ -90,13 +90,13 @@ function AppsWizard({ close, onNext }) {
     const [selectedApps, setSelectedApps] = useState([]);
 
     const toggleApp = (app) => {
-
-        if (selectedApps.includes(app)) {
-            setSelectedApps(selectedApps.filter((a) => a !== app));
+        if (selectedApps.some((a) => a.name === app.name)) {
+            setSelectedApps(
+                selectedApps.filter((a) => a.name !== app.name)
+            );
         } else {
             setSelectedApps([...selectedApps, app]);
         }
-
     };
 
     return (
@@ -123,14 +123,14 @@ function AppsWizard({ close, onNext }) {
 
                                 <div
                                     key={app.name}
-                                    className={`app-card ${selectedApps.includes(app.name)
-                                            ? "selected"
-                                            : ""
+                                    className={`app-card ${selectedApps.some((a) => a.name === app.name)
+                                        ? "selected"
+                                        : ""
                                         }`}
-                                    onClick={() => toggleApp(app.name)}
+                                    onClick={() => toggleApp(app)}
                                 >
 
-                                    {selectedApps.includes(app.name) && (
+                                    {selectedApps.some((a) => a.name === app.name) && (
                                         <div className="tick">✓</div>
                                     )}
 
